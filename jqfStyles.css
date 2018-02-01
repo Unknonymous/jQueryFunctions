@@ -1,0 +1,59 @@
+*{
+    
+    padding: 0px;
+    
+    background-color: white;
+    border: solid 1px blue;
+}
+#wrapper{
+    width: 1024px;
+    margin: auto;
+    background-color: black;
+
+}
+#title{
+    color: green;
+    width: 400px;
+    text-align: center;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.segment{
+    width: 800px;
+    margin: auto;
+    border-bottom: solid 5px black;
+}
+.segHeader{
+    color: blue;
+    text-align: center;
+}
+.btndiv{
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.btns{
+    margin-left: 60px;
+    margin-right: auto;
+}
+.label{
+    text-align: center;
+}
+.red{
+    color: red;
+}
+.emblem{
+    height: 78px;
+    width: auto;
+    border: solid 3px red;
+}
+#inputter{
+    width: 200px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+    text-align: center;
+}

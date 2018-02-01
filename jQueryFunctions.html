@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="jqfstyles.css">
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>jQuery Functions</title>
+    <script>
+        $(document).ready(function(){
+            $('#1-1').click(function(){
+                $('#block1').addClass('red');
+            })
+        }) 
+    </script><!--ends button 1-1 "Add Class"-->
+    <script>
+        $(document).ready(function(){
+            $('#1-2').click(function(){
+                $('#block1').slideToggle();
+            });
+        });
+    </script><!-- ends button 1-2 "Slide Toggle"-->
+    <script>
+        $(document).ready(function(){
+            $('#1-3').click(function(){
+                $('#block1').fadeIn()
+            })
+        })
+    </script><!--ends button 1-3 "Fade In"-->
+    <script>
+        $(document).ready(function(){
+            $('#1-4').click(function(){
+                $('#block1').fadeOut();
+            });
+        });
+    </script><!--ends button 1-4 "Fade Out"-->
+    <script>
+        $(document).ready(function(){
+            $("#2-1").click(function(){
+                $(".label").before('<img class="emblem" src="http://hddesktopwallpapers.in/wp-content/uploads/2015/07/cool-wallpapers-Magnificent.jpg" alt="Triforce"></img>');
+            });
+        });
+    </script><!--ends button 2-1 .Before-->
+    <script>
+        $(document).ready(function(){
+            $("#2-2").click(function(){
+                $(".label").after('<img class="emblem" src="https://floridadep.gov/sites/all/themes/basic/image_thumbs_png_gif_jpg.php?f=Fotolia_66039753_L.jpg&w=1600&h=600" alt="Water and Light"></img>');
+            });
+        });
+    </script><!--ends button 2-2 .After-->
+    <script>
+        $(document).ready(function(){
+            $("#2-3").click(function(){
+                $(".label").slideDown();
+            });
+        });
+    </script><!--end button 2-3 .slideDown-->
+    <script>
+        $(document).ready(function(){
+            $("#2-4").click(function(){
+                $(".label").toggle();
+            });
+        });
+    </script><!--ends button 2-4 .toggle-->
+    <script>
+        $(document).ready(function(){
+            $("#3-1").click(function(){
+                $("#hider").hide(600);
+            });
+        });
+    </script><!--ends button 3-1 .hide-->
+    <script>
+        $(document).ready(function(){
+            $("#3-2").click(function(){
+                $("#hider").show(600);
+            });
+        });
+    </script><!--ends button 3.2 .show -->
+    <script>
+        $(document).ready(function(){
+            $("#3-3").click(function(){
+                $(".segment").append("<h2>Having Fun with my Buttons?</h2>");
+            });
+        });
+    </script><!--ends button 3.3 append-->
+    <script>
+        $(document).ready(function(){
+            $("#3-4").click(function(){
+                $(".label").html("<h3 class='label'>These buttons do SO many things!!</h3>");
+            });
+        });
+    </script><!--ends button 3.4 html-->
+    <script>
+        $(document).ready(function(){
+            $("#4-1").click(function(){
+                $("h1").attr({style: "color:red"});
+            });
+        });
+    </script><!--ends button 4-1 attr-->
+    <script>
+        $(document).ready(function(){
+            $("#4-2").click(function(){
+                var write = $("#valtext").val();
+                $("#block4").text(write);
+            });
+        });
+    </script><!--ends button 4-2 .val-->
+    <script>
+        $(document).ready(function(){
+            $("#4-3").click(function(){
+                var ILB = "I LOVE BUTTONS!"
+                $("h1").text(ILB);
+            });
+        });
+    </script><!--ends button 4-3 .text-->
+    <script>
+        $(document).ready(function(){
+            $("#4-4").click(function(){
+                $("#4-4").data("finally","You Have Arrived at the Last Button!!!");
+                alert($("#4-4").data("finally"));
+            });
+        });
+    </script><!--ends button 4-4 .Data-->
+
+</head>
+
+<body>
+    
+    <div id="wrapper">
+        <h1 id="title">jQuery Functions Practice</h1>
+
+        <div class="segment">
+            <h1 class="segHeader">Button Block 1</h1>
+            <div class="btndiv">
+                <button class="btns" id="1-1" type="button">Add Class 1-1</button>
+                <button class="btns" id="1-2" type="button">Slide Toggle 1-2</button>
+                <button class="btns" id="1-3" type="button">Fade In 1-3</button>
+                <button class="btns" id="1-4" type="button">Fade Out 1-4</button>
+            </div>
+            <p class="label" id="block1">Click the Buttons to affect this text block.</p>
+        </div>
+        
+        <div class="segment" id="hider">
+            <h1 class="segHeader">Button Block 2</h1>
+            <div class="btndiv">
+                <button class="btns" id="2-1" type="button">.Before 2-1</button>
+                <button class="btns" id="2-2" type="button">.After 2-2</button>
+                <button class="btns" id="2-3" type="button">.slideDown 2-3</button>
+                <button class="btns" id="2-4" type="button">.toggle 2-4</button>
+            </div>
+            <p class="label" id="block2">Click the Buttons to affect all the blocks.</p>
+        </div>
+        
+        <div class="segment">
+            <h1 class="segHeader">Button Block 3</h1>
+            <div class="btndiv">
+                <button class="btns" id="3-1" type="button">.Hide 3-1</button>
+                <button class="btns" id="3-2" type="button">.Show 3-2</button>
+                <button class="btns" id="3-3" type="button">.Append3-3</button>
+                <button class="btns" id="3-4" type="button">.html 3-4</button>
+            </div>
+            <p class="label" id="block3">Click the Buttons to affect this text block.</p>
+        </div>
+        
+        <div class="segment">
+            <h1 class="segHeader" id="last">Button Block 4</h1>
+            <div class="btndiv">
+                <button class="btns" id="4-1" type="button">.attr 4-1</button>
+                <button class="btns" id="4-2" type="button">.val 4-2</button>
+                <button class="btns" id="4-3" type="button">.text 4-3</button>
+                <button class="btns" id="4-4" type="button">.data 4-4</button>
+            </div>
+            <p class="label" id="block4">Click the Buttons to affect this text block.</p>
+            <div id="inputter">
+                <input type="text" id="valtext" value="type Here then click .val 4-2">
+            </div><!--closes inputter-->
+            
+        </div>
+
+    </div>
+</body>
+</html>
